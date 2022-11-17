@@ -45,7 +45,7 @@ export default function Navbar() {
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <img style={{ height: "50px" }} src={require("../imagenes/carr.jpeg")} alt="Logo" />
+                    <img style={{ height: "50px" }} url={("/imagenes.carrr.jpeg")} alt="Logo" />
                     <Typography
                         variant="h6"
                         noWrap

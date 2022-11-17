@@ -4,7 +4,7 @@ export default function BodyApp() {
   return (
     <div>
       MAIN
-      <h1>HOLA CHIQUES</h1>
+      <h1>HOLA MUNDO</h1>
       <p>
         Una lorem ipsum con un par de cosasUna lorem ipsum con un par de
         cosasUna lorem ipsum con un par de cosasUna lorem ipsum con un par de

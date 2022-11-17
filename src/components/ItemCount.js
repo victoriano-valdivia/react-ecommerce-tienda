@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { contextoGeneral } from "../components/ContextContainer";
+import { contextoGeneral } from "./components/ContextContainer";
 
 export default function ItemCount({ ini, max, addItem }) {
   const { darkMode, setdarkMode } = useContext(contextoGeneral);
