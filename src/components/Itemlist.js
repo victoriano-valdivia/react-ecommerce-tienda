@@ -1,14 +1,13 @@
-import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
 import Item from "./Item";
 
-export default function ItemList({ productos }) {
+const ItemList = ({ products }) => {
   return (
-    <div style={{ border: "2px solid green", margin: "10px" }}>
-      {!productos.length && "Loading..."}
-      {productos.map((item) => (
-        <Item item={item} />
+    <ul className="cardProduct_conten">
+      {products.map((product) => (
+        <Item product={product} />
       ))}
-    </div>
+    </ul>
   );
-}
+};
+
+export default ItemList;

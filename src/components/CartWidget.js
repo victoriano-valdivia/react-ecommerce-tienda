@@ -1,10 +1,9 @@
-import React from "react";
-import ShoppingCart from "@mui/icons-material/ShoppingCart";
-
-export default function Cartwidget() {
+const CartWidget = () => {
   return (
     <div>
-      <ShoppingCart />
+      <ion-icon className="shop-nav" name="cart-outline"></ion-icon>
     </div>
   );
-}
+};
+
+export default CartWidget;

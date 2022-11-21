@@ -1,20 +1,18 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./section/styles.scss";
+import NavBar from "./components/NavBar.js";
 import ItemListContainer from "./components/ItemListContainer";
+import CardProduct from "./components/CardProduct";
 
 function App() {
   return (
-    
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<ItemListContainer/>}/>
-      </Routes>
-    </BrowserRouter>
-    
+    <div className="App">
+      <header>
+        <NavBar />
+      </header>
+      <ItemListContainer
+        greeting={"Hola Coder..!! Bienvenidos a mi Poryecto React.js"}
+      />
+    </div>
   );
 }
 

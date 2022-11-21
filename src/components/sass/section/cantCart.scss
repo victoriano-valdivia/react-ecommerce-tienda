@@ -1,0 +1,63 @@
+.cant-conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    .cant-selector{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        .cant-number{
+            width: 40px;
+            height: 40px;
+            border-radius: 6px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.372);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cant-button_contain{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .cant-button{
+                all: unset;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                &:hover{
+                    border-radius: 6px;
+                    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.372);
+                }
+            }
+        }
+    }
+    .button-add{
+        all: unset;
+        font-size: 2rem;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        &:hover{
+            color: $colorRed;
+        }
+    }
+    .button-add-disabled{
+        all: unset;
+        font-size: 2rem;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        cursor: no-drop;
+        transition: color 0.3s ease;
+    }
+    .active{
+        display: flex;
+    }
+}

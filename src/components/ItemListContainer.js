@@ -1,32 +1,35 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
-import { productosHC } from "./data.js";
+import { useState } from "react";
 import ItemList from "./ItemList";
-export default function ItemListContainer() {
-  const { idcategory } = useParams();
+import Loader from "./Loader";
+import PRODUCTOS from "./products";
 
-  const [productos, setProductos] = useState([]);
+const ItemListContainer = ({ greeting }) => {
+  const [products, setProducts] = useState([]);
+  const [hasProduct, setHasProduct] = useState(false);
 
-  useEffect(() => {
-    // alert("cambio la categoria por eso salta de nuevo este efecto");
-    const productosPromise = new Promise((res, rej) => {
-      setTimeout(() => {
-        res(productosHC);
-      }, 2000);
-    });
-    productosPromise.then((res) => {
-      if (idcategory) {
-        setProductos(res.filter((item) => item.category == idcategory));
-      } else {
-        setProductos(res);
-      }
-    });
-  }, [idcategory]);
+  const listproduct = new Promise((resolve) =>
+    setTimeout(() => {
+      resolve(PRODUCTOS);
+    }, 3000)
+  );
+
+  listproduct
+    .then((data) => setProducts(data))
+    .then((data) => setHasProduct(!data));
+
+  console.log(products);
 
   return (
-    <div style={{ border: "2px solid red", margin: "10px" }}>
-      <ItemList productos={productos} />;
+    <div className="itemListContainer">
+      <div>{greeting}</div>
+      {!hasProduct ? (
+        <Loader/>
+      ) : (
+        <ItemList products={products}/>
+      )}
+
     </div>
   );
-}
+};
+
+export default ItemListContainer;
