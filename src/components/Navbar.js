@@ -18,7 +18,7 @@ const NavBar = () => {
       <nav className="nav">
         <div className="navContainer">
           <div className="logo">
-            <p>Mon❤️Amie</p>
+            <p>HOME-COLECCTION</p>
           </div>
           <div className="menu">
             <ItemNav
