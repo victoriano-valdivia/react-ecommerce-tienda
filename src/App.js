@@ -10,7 +10,7 @@ function App() {
         <NavBar />
       </header>
       <ItemListContainer
-        greeting={"Hola Coder..!! Bienvenidos a mi Poryecto React.js"}
+        greeting={"bienvenido al mundo de la moda las mejores marca para hombres y mujeres "}
       />
     </div>
   );
